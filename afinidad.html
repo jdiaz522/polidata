@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Test de afinidad política de PoliData: responde preguntas por eje temático y visualiza porcentajes de afinidad por candidato." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>Test de afinidad · PoliData</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="app">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <div id="appHeader"></div>
+
+  <main id="main" class="app-main">
+    <div class="container">
+      <header class="page-head page-head-row">
+        <div>
+          <h1>Test de afinidad política</h1>
+          <p>Responde todas las preguntas para ver tu porcentaje de coincidencia con cada candidato.</p>
+        </div>
+        <a class="btn btn-secondary btn-sm" href="comparar.html">Volver al comparador</a>
+      </header>
+
+      <div id="afinidadRoot"></div>
+    </div>
+  </main>
+
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/afinidad.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compara hasta cuatro candidatos lado a lado en PoliData: antecedentes, propuestas, financiamiento y trayectoria, eje por eje." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>Comparar candidatos · PoliData</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="app">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <div id="appHeader"></div>
+
+  <main id="main" class="app-main">
+    <div class="container" id="compararRoot">
+      <header class="page-head page-head-row">
+        <div>
+          <h1>Comparar candidatos</h1>
+          <p>Selecciona hasta 4 candidatos para compararlos lado a lado.</p>
+        </div>
+        <div class="compare-counter-wrap">
+          <span class="compare-counter" id="compareCounter" aria-label="Candidatos seleccionados">0 / 4</span>
+          <span class="compare-counter-cap">Máximo 4 candidatos</span>
+        </div>
+      </header>
+
+      <p class="visually-hidden" id="compareLive" role="status" aria-live="polite"></p>
+
+      <!-- Tarjetas de seleccionados + agregar -->
+      <section class="selected-section" aria-label="Candidatos seleccionados">
+        <div class="selected-wrap" id="selectedWrap"></div>
+        <button type="button" class="add-card" id="addCandidateBtn" aria-haspopup="dialog">
+          <span class="add-card-plus" aria-hidden="true">+</span>
+          <span class="add-card-text">
+            <span class="add-card-label">Agregar candidato</span>
+            <span class="add-card-sub">Selecciona uno más</span>
+          </span>
+        </button>
+      </section>
+
+      <!-- Controles: eje temático + test de afinidad -->
+      <div class="compare-controls">
+        <label class="eje-control" for="ejeSelect">
+          <span>Comparar por eje temático:</span>
+          <select id="ejeSelect"></select>
+        </label>
+        <div class="compare-actions">
+          <a class="btn btn-secondary btn-sm" href="afinidad.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"></path></svg>
+            Test de afinidad
+          </a>
+          <button type="button" class="btn btn-secondary btn-sm" id="exportCompare">Exportar CSV</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="shareCompare">Compartir</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="printCompare">Reporte PDF</button>
+        </div>
+      </div>
+
+      <!-- Tabla comparativa (dinámica) -->
+      <section aria-label="Tabla comparativa">
+        <div id="compareTableWrap"></div>
+      </section>
+
+      <!-- Fuentes -->
+      <aside class="compare-sources" aria-label="Fuentes oficiales">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"></circle><path d="M12 8h.01M11 12h1v4h1"></path></svg>
+        <p><strong>Fuentes oficiales.</strong> Cada dato mostrado proviene de entidades oficiales: JNE, ONPE, Poder Judicial, Ministerio Público, Contraloría, RENIEC y SUNAT.</p>
+      </aside>
+    </div>
+  </main>
+
+  <div id="appFooter"></div>
+
+  <!-- Modal "Agregar candidato" -->
+  <div class="modal" id="addModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="document">
+      <div class="modal-head">
+        <h2 id="modalTitle">Agregar candidato</h2>
+        <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar ventana">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <ul class="modal-list" id="modalList"></ul>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/comparar.js"></script>
+</body>
+</html>

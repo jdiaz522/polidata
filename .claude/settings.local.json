@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import openpyxl; print\\('openpyxl', openpyxl.__version__\\)\")",
+      "Bash(python analyze_xlsx.py \"C:\\\\Users\\\\trist\\\\Desktop\\\\Proyecto ULive\\\\CALCULADORA PROMEDIO MATE DISCRETA.xlsx\")",
+      "Bash(python -c ' *)",
+      "Bash(python analyze_xlsx.py \"C:\\\\Users\\\\trist\\\\Desktop\\\\Proyecto ULive\\\\Hoja de ruta.xlsx\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(npx vitest *)",
+      "Bash(python -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(mkdir -p public/icons)",
+      "PowerShell($c = Get-NetTCPConnection -LocalPort 3123 -State Listen -ErrorAction SilentlyContinue; if \\($c\\) { $c.OwningProcess | Select-Object -Unique | ForEach-Object { try { Stop-Process -Id $_ -Force -ErrorAction Stop; \"stopped PID $_\" } catch {} } } else { \"no listener on 3123\" })",
+      "Bash(python verify_auth.py)",
+      "Bash(RUN_SUPABASE_IT=1 npx vitest run supabaseAdapter.integration)",
+      "Bash(grep -iE '\\\\.env\\\\.local|\\\\.xlsx$|/[a-f0-9-]{36}\\\\.png$|service')",
+      "Bash(PYTHONIOENCODING=utf-8 python extract_catalog.py)"
+    ]
+  }
+}

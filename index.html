@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PoliData: plataforma de transparencia electoral del Perú. Centraliza, simplifica y vuelve verificable la información electoral oficial para un voto informado." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>PoliData — Transparencia electoral del Perú</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       HEADER STICKY + NAVEGACIÓN (landing comercial)
+  ============================================================ -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="PoliData, inicio">
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect x="3" y="16" width="6" height="13" rx="1.5" fill="#1FA2FF"></rect>
+          <rect x="13" y="9" width="6" height="20" rx="1.5" fill="#ffffff"></rect>
+          <rect x="23" y="4" width="6" height="25" rx="1.5" fill="#1FA2FF"></rect>
+          <circle cx="16" cy="4.5" r="3" fill="#F2A900"></circle>
+        </svg>
+        <span class="logo-text">PoliData</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#problema">El problema</a></li>
+          <li><a href="#solucion">Funcionalidades</a></li>
+          <li><a href="candidatos.html">Candidatos</a></li>
+          <li><a href="comparar.html">Comparador</a></li>
+          <li><a href="afinidad.html">Afinidad</a></li>
+          <li><a href="reportes.html">Reportes IA</a></li>
+          <li><a href="seguimiento.html">365</a></li>
+          <li><a href="notificaciones.html">Alertas</a></li>
+          <li><a href="cuenta.html">Cuenta</a></li>
+          <li><a href="antecedentes.html?id=c1">Semáforo</a></li>
+          <li><a href="#waitlist" class="nav-cta">Lista de espera</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="hero-eyebrow">Transparencia electoral del Perú</span>
+          <h1 class="hero-title">Tu voto, <span class="accent">informado</span>. La política, <span class="accent">verificable</span>.</h1>
+          <p class="hero-subtitle">
+            PoliData centraliza y simplifica la información electoral oficial —candidatos,
+            antecedentes, financiamiento y planes de gobierno— dispersa en JNE, ONPE, Poder
+            Judicial, Ministerio Público y Contraloría. Cada dato cita su fuente.
+          </p>
+          <div class="hero-ctas">
+            <a href="candidatos.html" class="btn btn-primary">Explorar candidatos</a>
+            <a href="comparar.html" class="btn btn-secondary btn-secondary-light">Comparar candidatos</a>
+          </div>
+          <p class="hero-note">Gratuito para votantes · Sin afiliación política · Metodología pública</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EL PROBLEMA (estadísticas)
+    ============================================================ -->
+    <section class="problem section" id="problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">El problema</span>
+          <h2 class="section-title">Mucha información, poca claridad</h2>
+          <p class="section-lead">
+            La información electoral es extensa, técnica y está fragmentada entre cinco
+            instituciones. El resultado: un voto desinformado, sobre todo entre jóvenes y en
+            elecciones subnacionales.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <div class="stat-number">80<span class="stat-unit">%</span></div>
+            <p class="stat-desc">de peruanos declara no saber cómo votar (74% entre 18-24 y 86% entre 25-34).</p>
+            <cite class="stat-source">Fuente: Datum–El Comercio, 2026</cite>
+          </article>
+          <article class="stat-card reveal">
+            <div class="stat-number">10,257</div>
+            <p class="stat-desc">candidatos compiten por 198 cargos en las Elecciones Generales 2026.</p>
+            <cite class="stat-source">Fuente: Agencia Andina, 2025</cite>
+          </article>
+          <article class="stat-card reveal">
+            <div class="stat-number">2.5<span class="stat-unit">M</span></div>
+            <p class="stat-desc">votantes primerizos (2,518,576). Los jóvenes son ~26% del padrón electoral.</p>
+            <cite class="stat-source">Fuente: RENIEC, 2026</cite>
+          </article>
+          <article class="stat-card reveal">
+            <div class="stat-number">296</div>
+            <p class="stat-desc">alertas de desinformación electoral solo en febrero de 2026. Las noticias falsas tienen 70% más probabilidad de viralizarse.</p>
+            <cite class="stat-source">Fuentes: JNE, 2026 · Vosoughi et al., 2018</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LA SOLUCIÓN / FUNCIONALIDADES (grid de 8)
+    ============================================================ -->
+    <section class="features section section-light" id="solucion">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">La solución</span>
+          <h2 class="section-title">Una sola plataforma para decidir con criterio</h2>
+          <p class="section-lead">Ocho herramientas que convierten datos oficiales dispersos en información clara y accionable.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Ficha de candidato"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M4 20a8 8 0 0 1 16 0"></path></svg></div>
+            <h3>Ficha unificada del candidato</h3>
+            <p>Perfil, hoja de vida, antecedentes y financiamiento en un solo lugar verificable.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Resumen con IA"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"></path></svg></div>
+            <h3>Resúmenes de planes con IA</h3>
+            <p>Propuestas de gobierno explicadas en lenguaje simple y accesible.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Comparador"><path d="M7 4v16M17 4v16"></path><path d="M3 8h8M13 8h8M3 14h8M13 14h8"></path></svg></div>
+            <h3>Comparador lado a lado</h3>
+            <p>Compara hasta 4 candidatos por sus datos clave en una misma vista.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Semáforo de antecedentes"><rect x="8" y="2" width="8" height="20" rx="4"></rect><circle cx="12" cy="7" r="1.6" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"></circle><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"></circle></svg></div>
+            <h3>Semáforo de antecedentes</h3>
+            <p>Verde, ámbar o rojo según criterios públicos y auditables.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Test de afinidad"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"></path></svg></div>
+            <h3>Test de afinidad política</h3>
+            <p>Responde unas preguntas y descubre qué candidatura se acerca a tus prioridades.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Filtro geográfico"><path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10Z"></path><circle cx="12" cy="11" r="2.2"></circle></svg></div>
+            <h3>Filtro geográfico</h3>
+            <p>Encuentra a tus candidatos por circunscripción electoral.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="PoliData 365"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg></div>
+            <h3>PoliData 365</h3>
+            <p>Seguimiento post-electoral: asistencia, votaciones y cumplimiento de promesas.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Alertas y lectura simple"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9Z"></path><path d="M10 21a2 2 0 0 0 4 0"></path></svg></div>
+            <h3>Alertas y lectura simplificada</h3>
+            <p>Notificaciones personalizadas y un modo de lectura claro para todos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HERRAMIENTAS (previews con CTA a las páginas reales)
+    ============================================================ -->
+    <section class="tools section" id="herramientas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Pruébalo</span>
+          <h2 class="section-title">Seis herramientas, listas para usar</h2>
+          <p class="section-lead">Cada funcionalidad tiene su propio espacio. Entra y explóralas con datos de ejemplo.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Ficha del candidato"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M4 20a8 8 0 0 1 16 0"></path></svg></div>
+            <h3>Ficha del candidato</h3>
+            <p>Consulta trayectoria, propuestas, antecedentes y financiamiento, cada dato con su fuente.</p>
+            <a href="candidatos.html" class="btn btn-primary btn-sm">Explorar candidatos</a>
+          </article>
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Comparador electoral"><path d="M7 4v16M17 4v16"></path><path d="M3 8h8M13 8h8M3 14h8M13 14h8"></path></svg></div>
+            <h3>Comparador electoral</h3>
+            <p>Compara hasta cuatro candidatos en una sola vista, eje por eje.</p>
+            <a href="comparar.html" class="btn btn-primary btn-sm">Ir al comparador</a>
+          </article>
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Semáforo de antecedentes"><rect x="8" y="2" width="8" height="20" rx="4"></rect><circle cx="12" cy="7" r="1.6" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"></circle><circle cx="12" cy="17" r="1.6" fill="currentColor" stroke="none"></circle></svg></div>
+            <h3>Semáforo de antecedentes</h3>
+            <p>Comprende las alertas mediante criterios públicos y verificables.</p>
+            <a href="antecedentes.html?id=c1" class="btn btn-primary btn-sm">Conocer el semáforo</a>
+          </article>
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Test de afinidad"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"></path></svg></div>
+            <h3>Test de afinidad</h3>
+            <p>Responde preguntas por eje y revisa coincidencias y diferencias por candidato.</p>
+            <a href="afinidad.html" class="btn btn-primary btn-sm">Hacer el test</a>
+          </article>
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="PoliData 365"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg></div>
+            <h3>PoliData 365</h3>
+            <p>Monitorea asistencia, votaciones, promesas y notificaciones de autoridades seguidas.</p>
+            <a href="seguimiento.html" class="btn btn-primary btn-sm">Ver seguimiento</a>
+          </article>
+          <article class="tool-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Reportes IA"><path d="M4 4h11l5 5v11H4Z"></path><path d="M14 4v5h5"></path><path d="M8 13h8M8 16h5"></path></svg></div>
+            <h3>Reportes IA</h3>
+            <p>Genera reportes electorales, comparativos y tendencias con fuentes trazables.</p>
+            <a href="reportes.html" class="btn btn-primary btn-sm">Generar reporte</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CÓMO FUNCIONA (3 pasos)
+    ============================================================ -->
+    <section class="how section section-light" id="como-funciona">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Cómo funciona</span>
+          <h2 class="section-title">De la duda a la decisión en tres pasos</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num">1</span><h3>Busca</h3><p>Filtra por tu circunscripción y encuentra a los candidatos de tu voto.</p></li>
+          <li class="step reveal"><span class="step-num">2</span><h3>Compara</h3><p>Pon hasta 4 candidatos lado a lado: antecedentes, planes y financiamiento.</p></li>
+          <li class="step reveal"><span class="step-num">3</span><h3>Decide y sigue</h3><p>Vota informado y, con PoliData 365, fiscaliza el cumplimiento después.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         METODOLOGÍA DEL SEMÁFORO (explicación pública, estática)
+    ============================================================ -->
+    <section class="metodologia section" id="metodologia">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Metodología pública</span>
+          <h2 class="section-title">Cómo asignamos el semáforo de antecedentes</h2>
+          <p class="section-lead">
+            Cada color se asigna con criterios objetivos, públicos y auditables, basados
+            estrictamente en información oficial. Prioridad: rojo &gt; ámbar &gt; verde.
+          </p>
+        </div>
+
+        <ul class="method-colors reveal" aria-label="Criterios del semáforo">
+          <li class="method-color is-green">
+            <span class="method-dot tag-green" aria-hidden="true"></span>
+            <h3>Verde — Sin antecedentes</h3>
+            <p>No se registran procesos judiciales en curso ni sentencias firmes en las fuentes oficiales consultadas.</p>
+          </li>
+          <li class="method-color is-amber">
+            <span class="method-dot tag-amber" aria-hidden="true"></span>
+            <h3>Ámbar — Procesos en curso</h3>
+            <p>Existen investigaciones o procesos en trámite, sin sentencia firme. Rige la presunción de inocencia: informa, no condena.</p>
+          </li>
+          <li class="method-color is-red">
+            <span class="method-dot tag-red" aria-hidden="true"></span>
+            <h3>Rojo — Sentencias firmes</h3>
+            <p>Registra una o más sentencias condenatorias firmes (cosa juzgada), con su respectiva fuente verificable.</p>
+          </li>
+        </ul>
+
+        <p class="metodologia-foot reveal">
+          La metodología completa, sus fuentes y su versión histórica son de acceso abierto.
+          <a href="antecedentes.html?id=c1">Ver el semáforo en una ficha de demostración →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MODELO DE GOBERNANZA PROPUESTO
+    ============================================================ -->
+    <section class="consejo section section-light" id="consejo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Imparcialidad</span>
+          <h2 class="section-title">Modelo de gobernanza propuesto</h2>
+          <p class="section-lead">
+            La neutralidad de PoliData se sostendría en gobernanza, no en una promesa. El modelo
+            propuesto contempla un consejo plural y sin afiliación partidaria —aún por
+            constituir— que supervisaría la metodología, las fuentes y las decisiones editoriales.
+          </p>
+        </div>
+        <div class="consejo-grid">
+          <article class="consejo-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Academia"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="M6 10.5V15c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"></path></svg></div>
+            <h3>Academia</h3>
+            <p>Investigadores en ciencia política, derecho y datos validan los criterios técnicos.</p>
+          </article>
+          <article class="consejo-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Sociedad civil"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.4"></circle><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 6-1.5"></path></svg></div>
+            <h3>Sociedad civil</h3>
+            <p>ONGs y organizaciones de transparencia aportan vigilancia ciudadana e independencia.</p>
+          </article>
+          <article class="consejo-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Medios"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 9h6M7 13h10M7 16h10"></path></svg></div>
+            <h3>Medios</h3>
+            <p>Periodistas con experiencia en verificación de datos auditan la rigurosidad editorial.</p>
+          </article>
+        </div>
+        <p class="consejo-foot reveal">
+          El modelo propuesto prevé la publicación de actas y recomendaciones. PoliData no
+          recibiría financiamiento de partidos, candidatos ni del Estado en campaña.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PARA QUIÉN ES (3 tarjetas)
+    ============================================================ -->
+    <section class="publico section" id="publico">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Para quién es</span>
+          <h2 class="section-title">Pensado para quienes deciden e informan</h2>
+        </div>
+        <div class="publico-grid">
+          <article class="publico-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Jóvenes votantes"><circle cx="12" cy="7" r="4"></circle><path d="M5 21a7 7 0 0 1 14 0"></path></svg></div>
+            <h3>Jóvenes votantes</h3>
+            <p>18–30 años. Información clara y rápida para tu primer voto —o los siguientes— sin tecnicismos.</p>
+          </article>
+          <article class="publico-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Periodistas y docentes"><path d="M4 4h11l5 5v11H4Z"></path><path d="M14 4v5h5"></path><path d="M8 13h8M8 16h6"></path></svg></div>
+            <h3>Periodistas y docentes</h3>
+            <p>Datos verificables con fuente citada, listos para investigar, enseñar y contrastar.</p>
+          </article>
+          <article class="publico-card reveal">
+            <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" aria-label="Instituciones"><path d="M3 21h18M5 21V9l7-4 7 4v12"></path><path d="M9 21v-6h6v6"></path></svg></div>
+            <h3>Instituciones</h3>
+            <p>Universidades, medios y ONGs: acceso B2B a datos estructurados y herramientas a medida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONFIANZA / FUENTES OFICIALES
+    ============================================================ -->
+    <section class="trust section section-light" id="confianza">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Confianza</span>
+          <h2 class="section-title">Cada dato cita su fuente</h2>
+          <p class="section-lead">Trabajamos únicamente con información de las instituciones oficiales del Estado peruano.</p>
+        </div>
+        <ul class="sources-grid reveal" aria-label="Fuentes oficiales">
+          <li class="source-chip"><span class="source-abbr">JNE</span><span class="source-name">Jurado Nacional de Elecciones</span></li>
+          <li class="source-chip"><span class="source-abbr">ONPE</span><span class="source-name">Oficina Nacional de Procesos Electorales</span></li>
+          <li class="source-chip"><span class="source-abbr">PJ</span><span class="source-name">Poder Judicial</span></li>
+          <li class="source-chip"><span class="source-abbr">MP</span><span class="source-name">Ministerio Público</span></li>
+          <li class="source-chip"><span class="source-abbr">CGR</span><span class="source-name">Contraloría General de la República</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL + FORMULARIO LISTA DE ESPERA
+    ============================================================ -->
+    <section class="waitlist section" id="waitlist">
+      <div class="container">
+        <div class="waitlist-card reveal">
+          <h2 class="waitlist-title">Sé de los primeros en votar informado</h2>
+          <p class="waitlist-sub">Únete a la lista de espera y te avisaremos cuando PoliData esté disponible para las Elecciones Generales 2026.</p>
+
+          <form class="waitlist-form" id="waitlistForm" novalidate>
+            <div class="field">
+              <label for="email" class="visually-hidden">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required aria-describedby="emailMsg" />
+              <button type="submit" class="btn btn-primary">Unirme</button>
+            </div>
+            <p class="form-msg" id="emailMsg" role="status" aria-live="polite"></p>
+          </form>
+
+          <p class="waitlist-note">Demostración académica: el formulario valida el correo en tu navegador y no envía ni almacena datos en ningún servidor.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo logo--footer" aria-label="PoliData, inicio">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect x="3" y="16" width="6" height="13" rx="1.5" fill="#1FA2FF"></rect>
+            <rect x="13" y="9" width="6" height="20" rx="1.5" fill="#ffffff"></rect>
+            <rect x="23" y="4" width="6" height="25" rx="1.5" fill="#1FA2FF"></rect>
+            <circle cx="16" cy="4.5" r="3" fill="#F2A900"></circle>
+          </svg>
+          <span class="logo-text">PoliData</span>
+        </a>
+        <p class="footer-mission">
+          Democratizamos el acceso a la información electoral para un voto informado y una
+          rendición de cuentas permanente.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Enlaces del pie de página">
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="candidatos.html">Candidatos</a></li>
+            <li><a href="comparar.html">Comparador</a></li>
+            <li><a href="afinidad.html">Afinidad</a></li>
+            <li><a href="reportes.html">Reportes IA</a></li>
+            <li><a href="seguimiento.html">PoliData 365</a></li>
+            <li><a href="notificaciones.html">Notificaciones</a></li>
+            <li><a href="admin.html">Admin IA</a></li>
+            <li><a href="cuenta.html">Cuenta</a></li>
+            <li><a href="antecedentes.html?id=c1">Semáforo</a></li>
+            <li><a href="#solucion">Funcionalidades</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Transparencia</h4>
+          <ul>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#consejo">Gobernanza propuesta</a></li>
+            <li><a href="#confianza">Fuentes oficiales</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Comunidad</h4>
+          <ul>
+            <li><a href="#waitlist">Lista de espera</a></li>
+            <li><a href="#publico">Para instituciones</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Cada dato cita su fuente oficial. · ElectAnalysis © 2026 · PoliData — demostración académica con datos ficticios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

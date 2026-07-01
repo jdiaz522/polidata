@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explora los candidatos en PoliData: busca, filtra por región y cargo, revisa su semáforo de antecedentes y compáralos." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>Explorar candidatos · PoliData</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="app">
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <!-- Header compartido (inyectado por common.js) -->
+  <div id="appHeader"></div>
+
+  <main id="main" class="app-main">
+    <div class="container">
+      <header class="page-head">
+        <h1>Explorar candidatos</h1>
+        <p>Busca y filtra candidatos, revisa su semáforo de antecedentes y agrégalos a tu comparación.</p>
+      </header>
+
+      <!-- Filtros -->
+      <form class="dir-filters" role="search" aria-label="Filtros de candidatos" onsubmit="return false">
+        <div class="dir-filter">
+          <label for="filterText">Buscar</label>
+          <input type="search" id="filterText" placeholder="Nombre, partido, cargo, región…" autocomplete="off" />
+        </div>
+        <div class="dir-filter">
+          <label for="filterRegion">Región</label>
+          <select id="filterRegion"></select>
+        </div>
+        <div class="dir-filter">
+          <label for="filterCargo">Cargo</label>
+          <select id="filterCargo"></select>
+        </div>
+      </form>
+
+      <!-- Aviso accesible para acciones -->
+      <p class="visually-hidden" id="dirLive" role="status" aria-live="polite"></p>
+
+      <!-- Barra de comparación flotante -->
+      <div class="compare-bar" id="compareBar" hidden>
+        <span class="compare-bar-text">Candidatos en comparación: <strong data-count>0 / 4</strong></span>
+        <a class="btn btn-primary btn-sm" href="comparar.html">Ir al comparador</a>
+      </div>
+
+      <!-- Grid de candidatos -->
+      <section aria-label="Lista de candidatos">
+        <div class="dir-grid" id="candGrid"></div>
+        <div class="state-empty" id="candEmpty" hidden>
+          <h2>Sin resultados</h2>
+          <p>No encontramos candidatos con esos filtros. Prueba a limpiar la búsqueda.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer compartido (inyectado por common.js) -->
+  <div id="appFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/candidatos.js"></script>
+</body>
+</html>
