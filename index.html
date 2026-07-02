@@ -25,7 +25,7 @@
       <a href="#hero" class="logo" aria-label="PoliData, inicio">
         <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <rect x="3" y="16" width="6" height="13" rx="1.5" fill="#1FA2FF"></rect>
-          <rect x="13" y="9" width="6" height="20" rx="1.5" fill="#ffffff"></rect>
+          <rect class="logo-center" x="13" y="9" width="6" height="20" rx="1.5"></rect>
           <rect x="23" y="4" width="6" height="25" rx="1.5" fill="#1FA2FF"></rect>
           <circle cx="16" cy="4.5" r="3" fill="#F2A900"></circle>
         </svg>
@@ -38,19 +38,15 @@
         <span class="nav-toggle-bar"></span>
       </button>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegacion principal">
         <ul>
-          <li><a href="#problema">El problema</a></li>
-          <li><a href="#solucion">Funcionalidades</a></li>
+          <li><a href="#solucion">Plataforma</a></li>
+          <li><a href="#problema">Datos clave</a></li>
+          <li><a href="#metodologia">Metodologia</a></li>
           <li><a href="candidatos.html">Candidatos</a></li>
           <li><a href="comparar.html">Comparador</a></li>
-          <li><a href="afinidad.html">Afinidad</a></li>
           <li><a href="reportes.html">Reportes IA</a></li>
-          <li><a href="seguimiento.html">365</a></li>
-          <li><a href="notificaciones.html">Alertas</a></li>
-          <li><a href="cuenta.html">Cuenta</a></li>
-          <li><a href="antecedentes.html?id=c1">Semáforo</a></li>
-          <li><a href="#waitlist" class="nav-cta">Lista de espera</a></li>
+          <li><a href="candidatos.html" class="nav-cta">Abrir app</a></li>
         </ul>
       </nav>
     </div>
@@ -64,19 +60,61 @@
     <section class="hero" id="hero">
       <div class="container hero-inner">
         <div class="hero-content reveal">
-          <span class="hero-eyebrow">Transparencia electoral del Perú</span>
-          <h1 class="hero-title">Tu voto, <span class="accent">informado</span>. La política, <span class="accent">verificable</span>.</h1>
+          <span class="hero-eyebrow">Transparencia electoral del Peru</span>
+          <h1 class="hero-title">Tu voto, <span class="accent">informado</span>. La politica, <span class="accent">verificable</span>.</h1>
           <p class="hero-subtitle">
-            PoliData centraliza y simplifica la información electoral oficial —candidatos,
-            antecedentes, financiamiento y planes de gobierno— dispersa en JNE, ONPE, Poder
-            Judicial, Ministerio Público y Contraloría. Cada dato cita su fuente.
+            PoliData convierte datos electorales dispersos en fichas claras, comparaciones utiles,
+            alertas de antecedentes y reportes con trazabilidad. Menos ruido, mas evidencia para decidir.
           </p>
           <div class="hero-ctas">
             <a href="candidatos.html" class="btn btn-primary">Explorar candidatos</a>
             <a href="comparar.html" class="btn btn-secondary btn-secondary-light">Comparar candidatos</a>
           </div>
-          <p class="hero-note">Gratuito para votantes · Sin afiliación política · Metodología pública</p>
+          <ul class="hero-proof" aria-label="Principios de PoliData">
+            <li><strong>5</strong><span>fuentes oficiales</span></li>
+            <li><strong>IA</strong><span>con revision humana</span></li>
+            <li><strong>365</strong><span>seguimiento posterior</span></li>
+          </ul>
+          <p class="hero-note">Gratuito para votantes · Sin afiliacion politica · Metodologia publica</p>
         </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-image-wrap">
+            <img src="assets/images/hero-dashboard.png" alt="" />
+          </div>
+          <div class="hero-floating-card hero-floating-card--top">
+            <span class="status-dot tag-green"></span>
+            Datos con fuente verificada
+          </div>
+          <div class="hero-floating-card hero-floating-card--bottom">
+            <span class="status-dot tag-amber"></span>
+            Alertas claras, sin sentenciar
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-actions" aria-label="Accesos principales de PoliData">
+      <div class="container quick-actions-grid">
+        <a class="quick-action quick-action-blue reveal" href="candidatos.html">
+          <span>Buscar</span>
+          <strong>Candidatos por region</strong>
+          <small>Ficha, fuentes y antecedentes.</small>
+        </a>
+        <a class="quick-action quick-action-green reveal" href="afinidad.html">
+          <span>Descubrir</span>
+          <strong>Afinidad politica</strong>
+          <small>Coincidencias por prioridades.</small>
+        </a>
+        <a class="quick-action quick-action-amber reveal" href="reportes.html">
+          <span>Generar</span>
+          <strong>Reportes IA trazables</strong>
+          <small>Resumen, riesgos y fuentes.</small>
+        </a>
+        <a class="quick-action quick-action-red reveal" href="seguimiento.html">
+          <span>Fiscalizar</span>
+          <strong>PoliData 365</strong>
+          <small>Promesas y votaciones.</small>
+        </a>
       </div>
     </section>
 
@@ -128,7 +166,7 @@
         <div class="section-head reveal">
           <span class="section-kicker">La solución</span>
           <h2 class="section-title">Una sola plataforma para decidir con criterio</h2>
-          <p class="section-lead">Ocho herramientas que convierten datos oficiales dispersos en información clara y accionable.</p>
+          <p class="section-lead">Herramientas conectadas para pasar de la búsqueda inicial a la comparación, la revisión de fuentes y el seguimiento posterior.</p>
         </div>
 
         <div class="features-grid">
@@ -183,8 +221,8 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="section-kicker">Pruébalo</span>
-          <h2 class="section-title">Seis herramientas, listas para usar</h2>
-          <p class="section-lead">Cada funcionalidad tiene su propio espacio. Entra y explóralas con datos de ejemplo.</p>
+          <h2 class="section-title">Empieza por la tarea que necesitas resolver</h2>
+          <p class="section-lead">La portada te lleva a los flujos reales de la plataforma: buscar, comparar, revisar y fiscalizar.</p>
         </div>
 
         <div class="tools-grid">
